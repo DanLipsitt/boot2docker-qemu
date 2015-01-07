@@ -21,7 +21,7 @@ RUN for dep in $TCZ_DEPS; do \
     done
 
 # Register arm binary format at boot.
-COPY ./register_binfmt_arm /etc/rc.d/
+COPY ./register_binfmt_arm $ROOTFS/etc/rc.d/
 
 # Default command is to generate the iso and stream it to stdout.
 RUN /make_iso.sh
